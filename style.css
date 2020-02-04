@@ -1,0 +1,331 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css);
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Raleway", sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  color: #626262;
+}
+
+section {
+  padding: 60px 0 100px 0;
+}
+
+.p-large {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.bnt-lg {
+  display: inline-block;
+  padding: 22px 42px;
+  border-radius: 32px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s;
+  color: #fff;
+  font-size: 12px;
+}
+
+.btn-blue {
+  background-color: #00bfd8;
+}
+
+#header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.mainDiv {
+  padding: 87px 0 0 0;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.justify-content-flex-start {
+  justify-content: flex-start;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-flex-end {
+  justify-content: flex-end;
+}
+
+.justify-items-center {
+  justify-items: center;
+}
+
+.justify-items-flex-end {
+  justify-items: flex-end;
+}
+
+.justify-items-flex-start {
+  justify-items: flex-start;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.flex-direction-row {
+  flex-direction: row;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.row {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 6px 3px;
+  flex-grow: 1;
+}
+
+/*======================== Genral ============================================*/
+
+/*============================ navgition ======================================*/
+
+.navgition ul {
+  list-style: none;
+}
+
+.navgition ul li {
+  display: inline-block;
+}
+
+.navgition {
+  width: 100%;
+  padding: 10px 0;
+  position: fixed;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+
+.navgition__nav ul li {
+  margin: 0 10px;
+}
+
+.navgition__nav ul li a {
+  font-size: 18px;
+  line-height: 35px;
+  font-weight: 700;
+  padding: 26px 0;
+  color: #121212;
+  text-transform: uppercase;
+  position: relative;
+  transition: all 0.3s ease-out 0s;
+}
+
+.navgition__nav ul li > a::before {
+  position: absolute;
+  content: " ";
+  width: 8px;
+  height: 4px;
+  background-color: #0067f4;
+  left: 50%;
+  margin: 0 2px;
+  bottom: 14px;
+  transition: all 0.3s ease-out 0s;
+  opacity: 0;
+}
+
+.navgition__nav ul li > a::after {
+  position: absolute;
+  content: " ";
+  width: 8px;
+  height: 4px;
+  background-color: #0067f4;
+  left: auto;
+  right: 50%;
+  margin: 0 2px;
+  bottom: 14px;
+  transition: all 0.3s ease-out 0s;
+  opacity: 0;
+}
+
+.navgition__nav ul li:hover > a::before,
+.navgition__nav ul li:hover > a::after {
+  opacity: 1;
+}
+
+.navgition__followUs span {
+  font-size: 16px;
+  font-weight: 700;
+  color: #6c6c6c;
+  line-height: 35px;
+  margin: 0 15px 0 0;
+}
+
+.navgition__followUs ul li > a {
+  font-size: 32px;
+  color: #6c6c6c;
+  margin: 0 5px 0 0;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+
+/*=============== custom Meadi Query of heaber =======================================================*/
+
+@media (min-width: 576px) {
+  /* and (max-width:992)*/
+  .navgition__followUs {
+    display: none !important;
+  }
+}
+
+/*=============== custom Meadi Query of heaber =======================================================*/
+
+/*============================================ Navigation  =============================================*/
+
+/*============================================ home  =============================================*/
+
+.home {
+}
+
+.TeamDescrition__Title {
+  color: #00bfd8;
+}
+
+.TeamDescrition__Descr {
+  font-size: 32px;
+}
+
+.home .p-large {
+  margin-bottom: 24px;
+  color: #626262;
+}
+
+/*============================================ home  =============================================*/
+
+@media (max-width: 340px) {
+  /* Modile */
+  .container {
+    max-width: 340px;
+  }
+
+  .navgition__followUs,
+  .navgition__logo {
+    display: none !important;
+  }
+  .navgition ul li {
+    display: block;
+  }
+  .mainDiv {
+    padding: 110px 0 0 0;
+  }
+}
+
+@media (min-width: 341px) and (max-width: 575px) {
+  .container {
+    max-width: 540px;
+  }
+  .home {
+    background: none;
+  }
+
+  .navgition__followUs,
+  .navgition__logo {
+    display: none !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  /*Small */
+  .container {
+    max-width: 540px;
+  }
+
+  .navgition__followUs,
+  .navgition__logo {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 991) {
+  /* Small */
+  .container {
+    max-width: 720px;
+  }
+  .navgition__followUs {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199) {
+  .container {
+    max-width: 960px;
+  }
+
+  .navgition__followUs {
+    display: flex !important;
+  }
+  .info {
+    width: 200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* large*/
+  .container {
+    max-width: 1140px;
+  }
+  .navgition__followUs {
+    display: flex !important;
+  }
+}
