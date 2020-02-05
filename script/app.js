@@ -60,23 +60,60 @@ const buildMoves = response => {
         infoButton.innerText = "Show more!"
 
 
-        let posterimg = document.createElement("img"); // img
-        posterimg.src = `http://image.tmdb.org/t/p/w185${response.results[i].poster_path}`;
 
+
+
+
+        // let posterimg = document.createElement("img"); // img
+        // posterimg.src = `http://image.tmdb.org/t/p/w185${response.results[i].poster_path}`;
+
+        // let moviename = document.createElement("h1");
+        // moviename.innerText = response.results[i].title;
+        // let movierate = document.createElement("h2");
+        // movierate.innerText = response.results[i].vote_average;
+        // let movieabout = document.createElement("p");
+
+
+        // seconddiv.appendChild(posterimg);
+        // firstdiv.appendChild(seconddiv);
+        // firstdiv.appendChild(moviename);
+        // firstdiv.appendChild(movierate);
+        // firstdiv.appendChild(infoButton);
+        // movielist.appendChild(firstdiv);
+
+
+        let posterimg = document.createElement("img"); // img
+        posterimg.src = ` http://image.tmdb.org/t/p/w185${response.results[i].poster_path}`;
+
+        //  document.getElementsByClassName
         let moviename = document.createElement("h1");
         moviename.innerText = response.results[i].title;
         let movierate = document.createElement("h2");
+        movierate.classList.add("rate")
         movierate.innerText = response.results[i].vote_average;
-        let movieabout = document.createElement("p");
-
 
         seconddiv.appendChild(posterimg);
+        let thirdDiv = document.createElement("div");
+        thirdDiv.classList.add("rating")
+        let rateLabel = document.createElement("label");
+        rateLabel.classList.add("rate-label")
+        rateLabel.innerHTML = "Rating: "
+
         firstdiv.appendChild(seconddiv);
         firstdiv.appendChild(moviename);
-        firstdiv.appendChild(movierate);
-        firstdiv.appendChild(infoButton);
+        firstdiv.appendChild(thirdDiv);
+        thirdDiv.appendChild(rateLabel);
+        thirdDiv.appendChild(movierate);
+
         movielist.appendChild(firstdiv);
 
+        firstdiv.appendChild(seconddiv).classList.add();
+        firstdiv.appendChild(moviename).classList.add("name");
+        firstdiv.appendChild(thirdDiv).classList.add("rating");
+
+        firstdiv.appendChild(infoButton);
+
+        movielist.appendChild(firstdiv).classList.add("row");
 
 
 
