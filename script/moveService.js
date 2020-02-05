@@ -46,13 +46,12 @@ const myfun = response => {
         let posterimg = document.createElement("img"); // img
         posterimg.src = ` http://image.tmdb.org/t/p/w185${response.results[i].poster_path}`;
 
+        document.getElementsByClassName
         let moviename = document.createElement("h1");
         // moviename.classList.add("dgfd", "sdfd")
         moviename.innerText = response.results[i].title;
         let movierate = document.createElement("h2");
         movierate.innerText = response.results[i].vote_average;
-        let movieabout = document.createElement("p");
-        movieabout.innerText = response.results[i].overview;
 
         seconddiv.appendChild(posterimg);
 
@@ -68,8 +67,17 @@ const myfun = response => {
         // model.appendChild(modal_content)
         movielist.appendChild(firstdiv);
 
+        firstdiv.appendChild(seconddiv).classList.add();
+        firstdiv.appendChild(moviename).classList.add("name");
+        firstdiv.appendChild(movierate).classList.add("rate");
 
+        
 
+        movielist.appendChild(firstdiv).classList.add("row");
+       
+       
+      
+ 
 
 
         // posterimg.src = ` http://image.tmdb.org/t/p/w185${response.results[i].poster_path}`;
