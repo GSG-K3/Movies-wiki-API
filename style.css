@@ -62,11 +62,7 @@ a {
     background-color: transparent;
 }
 
-.container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
-}
+
 
 .display-flex {
     display: flex;
@@ -107,22 +103,19 @@ a {
 .flex-direction-row {
     flex-direction: row;
 }
-
-.col-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-}
-
-.col-3 {
-    flex: 0 0 25%;
-    max-width: 50%;
+/* ===== all above is blabla  */
+.movielist {
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 15px;
+    display: flex;
+    flex-direction: row;
 }
 
 .row {
-    position: relative;
+    
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -ms-flex-align: center;
     align-items: center;
@@ -130,14 +123,49 @@ a {
     justify-content: space-between;
     padding: 6px 3px;
     flex-grow: 1;
+    flex-direction: column;
 }
 
+.col-3 {
+    flex: 0 0 25%;
+    max-width: 50%;
+}
+
+
+
+.poster {
+  height: 18em;
+  width: 12em;
+}
+
+.name {
+  font-size: 20px ;
+  font-family: monospace;
+  color: #00bfd8;
+}
+.rate {
+  font-size: 20px ;
+}
+
+/* =============================  */
 
 /*======================== Genral ============================================*/
 
 
 /*============================ navgition ======================================*/
-
+.navigation-head{
+ position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-evenly;
+  padding: 6px 3px;
+  flex-grow: 1;
+}
 .navgition ul {
     list-style: none;
 }
