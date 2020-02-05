@@ -1,0 +1,51 @@
+   <div class="top4__first2">
+                <div class="1st">
+
+
+
+                    <div class="mImg">
+                        <img scr="#" alt="1st movie" id="first-poster">
+                    </div>
+
+
+
+
+                    <h1 class="mName"></h1>
+                    <h2 class="mRate"></h2>
+                    <p class="mAbout"></p>
+
+
+
+                </div>
+
+
+
+
+
+                <div class="2nd">
+                    <div class="mImg">
+                        <img scr="#" alt="2nd movie" id="second-poster">
+                    </div>
+                    <h1 class="mName"></h1>
+                    <h2 class="mRate"></h2>
+                    <p class="mAbout"></p>
+
+                </div>
+            </div>
+            <div class="top4__second2">
+                <div class="3ed">
+                    <div class="mImg">
+                        <img scr="#" alt="3ed movie" id="third-poster"> </div>
+                    <h1 class="mName"></h1>
+                    <h2 class="mRate"></h2>
+                    <p class="mAbout"></p>
+                </div>
+                <div class="4th">
+                    <div class="mImg">
+                        <img scr="#" alt="4th movie" id="fourth-poster">
+                    </div>
+                    <h1 class="mName"></h1>
+                    <h2 class="mRate"></h2>
+                    <p class="mAbout"></p>
+                </div>
+            </div>
