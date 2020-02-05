@@ -1,8 +1,10 @@
 let url = "https://api.themoviedb.org/3/discover/movie?api_key=6243f561bcd008ec397a81449573a5f4&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
 let movielist = document.querySelector(".movielist");
-let searchUrl = 'https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro&explaintext&titles=Joker%20(2019%20film)';
-let x = document.createElement("p");
-
+let searchUrl = 'https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro&explaintext&titles=Ad%20Astra%20(film)';
+let searchUrl2 = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro&explaintext&titles=Bad%20Boys%20for%20Life"
+let searchUrl3 = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro&explaintext&titles=Ford%20v%20Ferrari"
+let searchUrl1 = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro&explaintext&titles=1917"
+let infoText = document.createElement("p");
 let xhr = new XMLHttpRequest;
 const movies = (url, callback) => {
     xhr.onreadystatechange = function() {
@@ -21,6 +23,8 @@ const movies = (url, callback) => {
 const myfun = response => {
     for (let i = 0; i < 4; i++) {
 
+        let searchButton = document.getElementsByClassName("searchButton");
+        let inputSearch = document.getElementsByClassName("inputSearch");
 
         let firstdiv = document.createElement("div"); // 1st
         let seconddiv = document.createElement("div"); // miag
@@ -28,7 +32,7 @@ const myfun = response => {
         let infoButton = document.createElement("button");
         let modal_content = document.createElement("div");
         let close = document.createElement("span");
-        let infoText = document.createElement("p");
+
 
         // image
         infoButton.id = "myBtn"
@@ -74,23 +78,47 @@ const myfun = response => {
         // console.log("hello")
 
         infoButton.onclick = function() {
-            firstdiv.appendChild(model);
-            movies(searchUrl, wikifunction)
-                // infoText.innerText = response.query.pages[id].extract;
-            modal_content.appendChild(close);
-            modal_content.appendChild(infoText)
-            model.appendChild(modal_content)
-            modal.style.display = "block";
+                firstdiv.appendChild(model);
+                if (i == 0) { movies(searchUrl, wikifunction) }
+                if (i == 1) { movies(searchUrl1, wikifunction) }
+                if (i == 2) { movies(searchUrl2, wikifunction) }
+                if (i == 3) { movies(searchUrl3, wikifunction) }
 
-            if (event.target == modal) {
-                modal.style.display = "none";
+
+                // infoText.innerText = response.query.pages[id].extract;
+                modal_content.appendChild(close);
+                modal_content.appendChild(infoText);
+                model.appendChild(modal_content);
             }
-        }
+            // searchButton.onclick = function() {
+
+        //     let theSearchUrl = `http://www.omdbapi.com/?t=${inputSearch.innerText}&apikey=2720201f`
+        //     movies(theSearchUrl, searchfunction)
+
+        // const searchfunction = response => {
+
+        //     let firstdiv = document.createElement("div"); // 1st
+        //     let seconddiv = document.createElement("div"); // miag
+
+        // }
+
+
+
+
+
+
+
+        // modal.style.display = "block";
+
+        // if (event.target == modal) {
+        //     modal.style.display = "none";
+        // }
+
 
         // When the user clicks on <span> (x), close the modal
-        close.onclick = function() {
-            modal.style.display = "none";
-        }
+        // close.onclick = function() {
+        //     modal.style.display = "none";
+        // }
 
         // When the user clicks anywhere outside of the modal, close it
         // window.onclick = function(event) {
@@ -98,6 +126,8 @@ const myfun = response => {
         //         modal.style.display = "none";
         //     }
         // }
+
+
     }
 }
 const wikifunction = response => {
