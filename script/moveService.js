@@ -1,10 +1,11 @@
 let url = "https://api.themoviedb.org/3/discover/movie?api_key=6243f561bcd008ec397a81449573a5f4&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
 let movielist = document.querySelector(".movielist");
 let searchUrl = 'https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro&explaintext&titles=Ad%20Astra%20(film)';
-let searchUrl2 = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro&explaintext&titles=Bad%20Boys%20for%20Life"
-let searchUrl3 = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro&explaintext&titles=Ford%20v%20Ferrari"
-let searchUrl1 = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro&explaintext&titles=1917"
+let searchUrl2 =  "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro&explaintext&titles=1917"
+let searchUrl3 = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro&explaintext&titles=Bad%20Boys%20for%20Life"
+let searchUrl1 ="https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro&explaintext&titles=Ford%20v%20Ferrari"
 let infoText = document.createElement("p");
+let modal_content = document.createElement("div");
 let xhr = new XMLHttpRequest;
 const movies = (url, callback) => {
     xhr.onreadystatechange = function() {
@@ -30,7 +31,7 @@ const myfun = response => {
         let seconddiv = document.createElement("div"); // miag
         let model = document.createElement("div");
         let infoButton = document.createElement("button");
-        let modal_content = document.createElement("div");
+        // let modal_content = document.createElement("div");
         let close = document.createElement("span");
 
 
@@ -51,27 +52,29 @@ const myfun = response => {
         // moviename.classList.add("dgfd", "sdfd")
         moviename.innerText = response.results[i].title;
         let movierate = document.createElement("h2");
+        movierate.classList.add("rate")
         movierate.innerText = response.results[i].vote_average;
 
         seconddiv.appendChild(posterimg);
+        let thirdDiv = document.createElement("div");
+        thirdDiv.classList.add("rating")
+        let rateLabel = document.createElement("label");
+        rateLabel.classList.add("rate-label")
+        rateLabel.innerHTML = "Rating: "
 
         firstdiv.appendChild(seconddiv);
         firstdiv.appendChild(moviename);
-        firstdiv.appendChild(movierate);
-
-        firstdiv.appendChild(movieabout);
-        firstdiv.appendChild(infoButton);
-        // firstdiv.appendChild(model);
-        // modal_content.appendChild(close);
-        // modal_content.appendChild(infoText)
-        // model.appendChild(modal_content)
+        firstdiv.appendChild(thirdDiv);
+        thirdDiv.appendChild(rateLabel);
+        thirdDiv.appendChild(movierate);
+        
         movielist.appendChild(firstdiv);
 
         firstdiv.appendChild(seconddiv).classList.add();
         firstdiv.appendChild(moviename).classList.add("name");
-        firstdiv.appendChild(movierate).classList.add("rate");
-
+        firstdiv.appendChild(thirdDiv).classList.add("rating");
         
+        firstdiv.appendChild(infoButton);
 
         movielist.appendChild(firstdiv).classList.add("row");
        
@@ -87,16 +90,19 @@ const myfun = response => {
 
         infoButton.onclick = function() {
                 firstdiv.appendChild(model);
-                if (i == 0) { movies(searchUrl, wikifunction) }
-                if (i == 1) { movies(searchUrl1, wikifunction) }
-                if (i == 2) { movies(searchUrl2, wikifunction) }
-                if (i == 3) { movies(searchUrl3, wikifunction) }
-
+               
 
                 // infoText.innerText = response.query.pages[id].extract;
                 modal_content.appendChild(close);
                 modal_content.appendChild(infoText);
                 model.appendChild(modal_content);
+
+                 if (i == 0) { movies(searchUrl, wikifunction) }
+                if (i == 1) { movies(searchUrl1, wikifunction) }
+                if (i == 2) { movies(searchUrl2, wikifunction) }
+                if (i == 3) { movies(searchUrl3, wikifunction) }
+
+                 //modal.style.display = "block";
             }
             // searchButton.onclick = function() {
 
@@ -116,17 +122,17 @@ const myfun = response => {
 
 
 
-        // modal.style.display = "block";
+       
 
-        // if (event.target == modal) {
-        //     modal.style.display = "none";
-        // }
+    //     if (event.target == modal) {
+    //         modal.style.display = "none";
+    //     }
 
 
-        // When the user clicks on <span> (x), close the modal
-        // close.onclick = function() {
-        //     modal.style.display = "none";
-        // }
+    //    // When the user clicks on <span> (x), close the modal
+    //     close.onclick = function() {
+    //         modal.style.display = "none";
+    //     }
 
         // When the user clicks anywhere outside of the modal, close it
         // window.onclick = function(event) {
