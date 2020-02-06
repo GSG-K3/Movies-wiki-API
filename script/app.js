@@ -113,7 +113,7 @@ const buildMoves = response => {
 
         firstdiv.appendChild(infoButton);
 
-        movielist.appendChild(firstdiv).classList.add("row");
+        movielist.appendChild(firstdiv).classList.add("row","movieContainer");
 
 
 
