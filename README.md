@@ -2,10 +2,10 @@ Our page "Ocean Movies" : https://gsg-k3.github.io/Ocean-Movies/. :dolphin:
 
 Members:
 
-Bayan Jubah 
-Ruba
-Hanan
-Yakoob
+Bayan Jubah, 
+Ruba,
+Hanan,
+Yakoob.
 
 Description:
 
