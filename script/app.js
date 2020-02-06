@@ -5,9 +5,9 @@ let searchUrl =
 let searchUrl2 =
   "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro&explaintext&titles=Bad%20Boys%20for%20Life";
 let searchUrl3 =
-  "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro&explaintext&titles=Joker_(2019_film)";
+  "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro&explaintext&titles=Birds_of_Prey_(2020_film)";
 let searchUrl1 =
-  "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro&explaintext&titles=1917";
+  "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro&explaintext&titles=1917_(2019_film)";
 
 let model;
 let movielist = document.querySelector("#movies");
@@ -61,6 +61,8 @@ const buildMoves = response => {
 
     let posterimg = document.createElement("img"); // img
     posterimg.src = ` http://image.tmdb.org/t/p/w185${response.results[i].poster_path}`;
+
+    posterimg.alt = response.results[i].title;
     let moviename = document.createElement("h1");
     moviename.innerText = response.results[i].title;
     let movierate = document.createElement("h2");
