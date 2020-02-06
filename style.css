@@ -142,6 +142,7 @@ a {
   font-family: monospace;
   color: #00bfd8;
   width: 190px;
+
   line-height: 1.4;
   text-align: center;
 }
@@ -445,6 +446,7 @@ a {
 
 .movieContainer {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  /* padding: 40px 20px; */
   padding: 24px 0;
   border-radius: 8px;
   position: relative;
