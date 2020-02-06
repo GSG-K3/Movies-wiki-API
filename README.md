@@ -7,7 +7,7 @@ Yakoob
 
 Description:
 
-In this Project we desiga a web page that uses two API which are Movie DB and wikipedia. the movie API return the four most popular films and display it on the screen, when the user click on show more button, the wikipedia send some informatioin about specific film and it will be shown in popup box.
+In this Project we design a web page that uses two APIs which are Movie DB and wikipedia. the movie API return the top four most popular films and display it on the screen, when the user click on show more button, the wikipedia send some informatioin about specific film and it will be shown in pop up box.
 
 User Juerny:
 
